@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300&display=swap");
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F0F0F2;
+}
+
+.content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.person {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.person__photo-wrap {
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  border: 4px solid #0EB1E8;
+  background-color: #0EB1E8;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.person__photo {
+  width: 100%;
+}
+
+.person__name {
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 230px;
+  height: 100vh;
+  background-color: #004E74;
+}
+
+.navbar__list {
+  margin-bottom: 90px;
+}
+
+.navbar__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 20px;
+  -webkit-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+  color: #0EB1E8;
+}
+
+.navbar__items:hover {
+  background-color: #035881;
+  cursor: pointer;
+}
+
+.navbar__items_active {
+  background-color: #035881;
+  color: #ffffff;
+}
+
+.navbar__icon {
+  height: 25px;
+  margin-right: 10px;
+}
+
+.navbar__items-label {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+}
+
+.navbar__btn {
+  border: none;
+  background: none;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-calc(100% - 40px);
+  width: calc(100% - 40px);
+  border: 1px solid #0EB1E8;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  margin: 0 20px;
+  -webkit-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+.navbar__btn:hover {
+  border-color: #ffffff;
+  cursor: pointer;
+}
+
+.navbar__btn:focus, .navbar__btn:active {
+  outline: none;
+}
+
+.navbar__btn-text {
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.main {
+  width: -webkit-calc(100% - 250px);
+  width: calc(100% - 250px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: scroll;
+  margin-left: 20px;
+}
+
+.main__title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #011925;
+}
+
+.main__content-block {
+  background-color: #ffffff;
+  padding: 50px 20px;
+}
+/*# sourceMappingURL=main.css.map */

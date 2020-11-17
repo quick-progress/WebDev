@@ -1,0 +1,47 @@
+.navbar
+  display: flex
+  flex-direction: column
+  width: 230px
+  height: 100vh
+  background-color: $navColor
+  &__list
+    margin-bottom: 90px
+  &__items
+    display: flex
+    align-items: center
+    padding: 12px 20px
+    transition: ease-in-out 0.3s
+    color: $lightBlue
+    &:hover
+      background-color: $navColorLight
+      cursor: pointer
+    &_active
+      background-color: $navColorLight
+      color: #ffffff
+  &__icon
+    height: 25px
+    margin-right: 10px
+  &__items-label
+    font-size: 16px
+    +regular
+  &__btn
+    border: none
+    background: none
+    padding: 10px 0
+    display: flex
+    align-items: center
+    justify-content: center
+    width: calc(100% - 40px)
+    border: 1px solid $lightBlue
+    border-radius: 5px
+    margin: 0 20px
+    transition: ease-in-out 0.3s
+    &:hover
+      border-color: #ffffff
+      cursor: pointer
+    &:focus, &:active
+      outline: none
+    &-text
+      color: #ffffff
+      +regular
+      font-size: 14px

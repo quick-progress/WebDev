@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <div class="content">
+      <nav class="navbar">
+        <div class="navbar__person-block person">
+          <div class="person__photo-wrap">
+            <img src="assets/img/empty-photo.jpg" alt="Фото профиля" class="person__photo">
+          </div>
+          <span class="person__name">Георгий</span>
+        </div>
+        <ul class="navbar__list">
+          <li class="navbar__items navbar__items_active">
+            <img class="navbar__icon" src="assets/img/icons/profile.svg" alt="Профиль" >
+            <span class="navbar__items-label">Профиль</span>
+          </li>
+          <li class="navbar__items">
+            <img class="navbar__icon" src="assets/img/icons/cources.svg" alt="Курсы">
+            <span class="navbar__items-label">Курсы</span>
+          </li>
+          <li class="navbar__items">
+            <img class="navbar__icon" src="assets/img/icons/statistic.svg" alt="Статистика">
+            <span class="navbar__items-label">Статистика</span>
+          </li>
+          <li class="navbar__items">
+            <img class="navbar__icon" src="assets/img/icons/help.svg" alt="Помощь">
+            <span class="navbar__items-label">Помощь</span>
+          </li>
+        </ul>
+        <div class="navbar__exit-block">
+          <button class="navbar__btn">
+            <img src="assets/img/icons/exit.svg" alt="Выйти" class="navbar__icon">
+            <span class="navbar__btn-text">Выйти</span>
+          </button>
+        </div>
+      </nav> <!-- /.navbar -->
+      <main class="main">
+        <div class="main__content-block">
+          <h2 class="main__title">Профиль</h2>
+          <form class="main__person" action="#">
+            <div class="main__input-block">
+              <div class="main__input-group">
+                <h3 class="main__group-title">Личное</h3>
+                <label class="input__label" for="person-name">Имя</label>
+                <input class="main__input" id="person-name" type="text" value="Георгий">
+                <label class="input__label" for="person-surname">Фамилия</label>
+                <input class="main__input" id="person-surname" type="text" value="Кузнецов">
+                <label class="input__label" for="person-patronymic">Отчество</label>
+                <input class="main__input" id="person-patronymic" type="text" value="Сергеевич">
+              </div>
+              <div class="main__input-group">
+                <h3 class="main__group-title">Контакты</h3>
+                <label class="input__label" for="person-phone">Телефон</label>
+                <input class="main__input" id="person-phone" type="text" value="+79876543210">
+                <label class="input__label" for="person-email">Электронная почта</label>
+                <input class="main__input" id="person-email" type="text" value="electron_mail@email.com">
+                <span class="main__btn-discription">Добавьте дополнительную эл. почту</span>
+                <button class="main__mail-add">+ Добавить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </main> <!-- /.main -->
+  </div> <!-- /.main -->
+</body>
+</html>
