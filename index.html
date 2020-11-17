@@ -48,23 +48,45 @@
             <div class="main__input-block">
               <div class="main__input-group">
                 <h3 class="main__group-title">Личное</h3>
-                <label class="input__label" for="person-name">Имя</label>
-                <input class="main__input" id="person-name" type="text" value="Георгий">
-                <label class="input__label" for="person-surname">Фамилия</label>
-                <input class="main__input" id="person-surname" type="text" value="Кузнецов">
-                <label class="input__label" for="person-patronymic">Отчество</label>
-                <input class="main__input" id="person-patronymic" type="text" value="Сергеевич">
+                <label class="main__label" for="person-name">Имя</label>
+                <input class="main__input personal-info" id="person-name" type="text" value="Георгий">
+                <label class="main__label" for="person-surname">Фамилия</label>
+                <input class="main__input personal-info" id="person-surname" type="text" value="Кузнецов">
+                <label class="main__label" for="person-patronymic">Отчество</label>
+                <input class="main__input personal-info" id="person-patronymic" type="text" value="Сергеевич">
               </div>
               <div class="main__input-group">
                 <h3 class="main__group-title">Контакты</h3>
-                <label class="input__label" for="person-phone">Телефон</label>
-                <input class="main__input" id="person-phone" type="text" value="+79876543210">
-                <label class="input__label" for="person-email">Электронная почта</label>
-                <input class="main__input" id="person-email" type="text" value="electron_mail@email.com">
+                <label class="main__label" for="person-phone">Телефон</label>
+                <input class="main__input personal-info" id="person-phone" type="text" value="+79876543210">
+                <label class="main__label" for="person-email">Электронная почта</label>
+                <input class="main__input personal-info" id="person-email" type="text" value="electron_mail@email.com">
                 <span class="main__btn-discription">Добавьте дополнительную эл. почту</span>
                 <button class="main__mail-add">+ Добавить</button>
               </div>
             </div>
+            <div class="main__adress-group">
+              <h3 class="main__group-title">Адрес</h3>
+              <div class="main__adress-wrap">
+                <div class="main__input-wrap">
+                  <label class="main__label" for="post-index">Индекс</label>
+                  <input class="main__input" id="post-index" type="text" value="644000">
+                </div>
+                <div class="main__input-wrap">
+                  <label class="main__label" for="town">Город</label>
+                  <input class="main__input" id="town" type="text" value="Омск">
+                </div>
+                <div class="main__input-wrap">
+                  <label class="main__label" for="street">Улица</label>
+                  <input class="main__input" id="street" type="text" value="Интернациональная">
+                </div>
+                <div class="main__input-wrap">
+                  <label class="main__label" for="house-number">Дом №, корпус</label>
+                  <input class="main__input" id="house-number" type="text" value="7">
+                </div>
+              </div>
+            </div>
+            <button class="main__submit-btn" type="submit">Сохранить</button>
           </form>
         </div>
       </main> <!-- /.main -->

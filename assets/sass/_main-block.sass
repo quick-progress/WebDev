@@ -1,14 +1,93 @@
 .main
     width: calc(100% - 250px)
+    height: 100vh
     display: flex
     flex-direction: column
     overflow-y: scroll
     margin-left: 20px
+    +regular
+    padding: 40px 50px
+    background-color: #ffffff
     &__title
         +semiBold
-        font-size: 22px
+        font-size: 28px
         color: #011925
+        display: block
+        margin-bottom: 40px
     &__content-block
-        background-color: #ffffff
-        padding: 50px 20px 
-        
+        min-height: 100%
+    &__input-block
+        display: flex
+        margin-bottom: 30px
+    &__input-group
+        display: flex
+        flex-direction: column
+        width: calc(100% - 90px)
+        margin-right: 100px
+        &:last-child
+            margin-right: 0
+    &__group-title
+        margin-bottom: 20px
+        font-size: 18px
+        +semiBold
+    &__label, &__btn-discription
+        font-size: 14px
+        color: #023853
+        +italic
+        display: block
+        margin-bottom: 5px
+    &__input
+        display: block
+        margin-bottom: 15px
+        padding: 7px
+        font-size: 15px
+        +regular
+        border: 2px solid #aaaaaa
+        color: #686868
+        &:last-child
+            margin-bottom: 0
+        &:active, &:focus
+            outline: none
+            border: 2px solid $lightBlue
+            color: #000000
+    &__mail-add
+        padding: 7px
+        font-size: 15px
+        +semiBold
+        border: 2px solid #aaaaaa
+        color: $lightBlue
+        background: none
+        transition: ease-in-out 0.3s
+        &:hover
+            cursor: pointer
+            border: 2px solid $lightBlue
+        &:active, &:focus
+            outline: none
+    &__adress-wrap
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        margin-bottom: 45px
+    &__submit-btn
+        display: flex
+        margin: 0 auto
+        padding: 7px
+        width: 200px
+        justify-content: center
+        font-size: 16px
+        +semiBold
+        margin-bottom: 45px
+        background-color: rgba(14,177,232,0.3)
+        border: none
+        border: 2px solid $lightBlue
+        transition: ease-in-out 0.3s
+        &:hover
+            cursor: pointer
+            background-color: $lightBlue
+        &:active, &:focus
+            outline: none
+
+
+
+
+
