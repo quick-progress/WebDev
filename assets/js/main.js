@@ -52,19 +52,18 @@ document.querySelector('.main__delete-email').addEventListener('click', deleteEm
 //Перехват отправки
 
 getEl('.main__submit-btn').addEventListener('click', function (evnt) {
-  console.log(evnt);
   evnt.preventDefault();
   const inputList = document.querySelectorAll('.main__input');
 
   inputList.forEach( function (item, i, arr) {
     if ( !checkInput( item.value, item.type ) ) {
-      item.style.outline = '2px solid #ff6a6a';
+      item.style.border = '2px solid #ff6a6a';
       item.title = "Допустимы символы a-z, A-Z, а-я, А-Я, 0-9";
     } else if ( item.value === '' ) {
-      item.style.outline = '2px dotted #ff6a6a';
+      item.style.border = '2px solid #ff6a6a';
       item.title = "Это поле не должно быть пустым!";
     } else {
-      item.style.outline = 'none';
+      item.style = '';
       item.title = "";
     };
   });
