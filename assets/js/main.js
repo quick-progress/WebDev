@@ -1,4 +1,6 @@
-/* Базовые функции */
+/***************************
+ *  Базовые функции
+***************************/
 const deleteElement = (element) => {
   document.querySelector(element).remove();
   return 0;
@@ -43,19 +45,28 @@ function deleteEmail(evnt) {
 document.querySelector('.main__delete-email').addEventListener('click', deleteEmail);
 
 
-/*********
+/***************************
  *  Отправка формы 
-*********/
+***************************/
 
 //Перехват отправки
 
 getEl('.main__submit-btn').addEventListener('click', function (evnt) {
+  console.log(evnt);
   evnt.preventDefault();
   const inputList = document.querySelectorAll('.main__input');
 
   inputList.forEach( function (item, i, arr) {
-    checkInput( item.value, item.type, item );
-    console.log(item.value);
+    if ( !checkInput( item.value, item.type ) ) {
+      item.style.outline = '2px solid #ff6a6a';
+      item.title = "Допустимы символы a-z, A-Z, а-я, А-Я, 0-9";
+    } else if ( item.value === '' ) {
+      item.style.outline = '2px dotted #ff6a6a';
+      item.title = "Это поле не должно быть пустым!";
+    } else {
+      item.style.outline = 'none';
+      item.title = "";
+    };
   });
 });
 
@@ -63,26 +74,13 @@ getEl('.main__submit-btn').addEventListener('click', function (evnt) {
 function checkInput(inputValue, inputType) {
   switch(inputType) {
     case 'text':
-      if ( inputValue.search(/[a-zA-Z]/) > 0 ) {
-        
-      } else {
-        console.log('Error: uncorrect "text"');
-      };
+      if ( inputValue.search(/[^A-Za-zа-яА-я0-9-]+/) >=0 ) { return false; } else { return true; };
       break;
     case 'tel':
-      if ( inputValue.length <= 10 || inputValue.search(/[a-zA-Z!@#\$]/) > 0 ) {
-        console.log('Error: uncorrect "phone"');
-      } else {
-        
-      };
+      if ( inputValue.length > 12 || inputValue.length <= 10 || inputValue.search(/[a-zA-Z!@#\$]/) >= 0 ) { return false; } else { return true; };
       break;
     case 'email':
-      if ( inputValue.search(/[a-zA-Z-_0-9]@[a-z]{1,}.[a-z]{2,10}/) > 0 ) {
-        
-      } else {
-        console.log('Error: uncorrect "email"');
-        return 0;
-      };
+      if ( inputValue.search(/^[a-zA-Z-_0-9]{1,}@[a-z]{2,}.[a-z]{2,10}$/) >= 0 ) { return true; } else { return false; };
       break;
   };
 };

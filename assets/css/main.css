@@ -211,6 +211,10 @@ body {
   min-height: 100%;
 }
 
+.main__person {
+  padding-bottom: 10px;
+}
+
 .main__input-block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -264,10 +268,6 @@ body {
   font-weight: normal;
   border: 2px solid #aaaaaa;
   color: #686868;
-}
-
-.main__input:last-child {
-  margin-bottom: 0;
 }
 
 .main__input:active, .main__input:focus {
@@ -371,5 +371,35 @@ body {
 
 .main__submit-btn:active, .main__submit-btn:focus {
   outline: none;
+}
+
+@media all and (min-width: 320px) and (max-width: 990px) {
+  .main__input-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .main__input-group {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 760px) {
+  .main__adress-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main__input-wrap {
+    width: 100%;
+  }
+  .main__input {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
