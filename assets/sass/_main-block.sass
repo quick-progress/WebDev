@@ -19,7 +19,7 @@
     &__input-block
         display: flex
         margin-bottom: 30px
-    &__input-group
+    &__input-group, &__add-email-wrap
         display: flex
         flex-direction: column
         width: calc(100% - 90px)
@@ -50,6 +50,23 @@
             outline: none
             border: 2px solid $lightBlue
             color: #000000
+    &__add-email-wrap
+        width: 100%
+        position: relative
+    &__delete-email
+        position: absolute
+        top: 5px
+        right: 5px
+        background: none
+        border: none
+        display: none
+        &:active, &:focus
+            outline: none
+        &:hover
+            cursor: pointer
+    &__delete-btn
+        height: 15px
+        width: 15px
     &__mail-add
         padding: 7px
         font-size: 15px

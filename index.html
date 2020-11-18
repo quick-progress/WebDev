@@ -19,19 +19,19 @@
         <ul class="navbar__list">
           <li class="navbar__items navbar__items_active">
             <img class="navbar__icon" src="assets/img/icons/profile.svg" alt="Профиль" >
-            <span class="navbar__items-label">Профиль</span>
+            <span class="navbar__items-label" data-page="profile">Профиль</span>
           </li>
           <li class="navbar__items">
             <img class="navbar__icon" src="assets/img/icons/cources.svg" alt="Курсы">
-            <span class="navbar__items-label">Курсы</span>
+            <span class="navbar__items-label" data-page="cources">Курсы</span>
           </li>
           <li class="navbar__items">
             <img class="navbar__icon" src="assets/img/icons/statistic.svg" alt="Статистика">
-            <span class="navbar__items-label">Статистика</span>
+            <span class="navbar__items-label" data-page="statistic">Статистика</span>
           </li>
           <li class="navbar__items">
             <img class="navbar__icon" src="assets/img/icons/help.svg" alt="Помощь">
-            <span class="navbar__items-label">Помощь</span>
+            <span class="navbar__items-label" data-page="help">Помощь</span>
           </li>
         </ul>
         <div class="navbar__exit-block">
@@ -49,20 +49,23 @@
               <div class="main__input-group">
                 <h3 class="main__group-title">Личное</h3>
                 <label class="main__label" for="person-name">Имя</label>
-                <input class="main__input personal-info" id="person-name" type="text" value="Георгий">
-                <label class="main__label" for="person-surname">Фамилия</label>
-                <input class="main__input personal-info" id="person-surname" type="text" value="Кузнецов">
+                <input class="main__input personal-info" id="person-name" type="text" name="username" value="Георгий">
                 <label class="main__label" for="person-patronymic">Отчество</label>
-                <input class="main__input personal-info" id="person-patronymic" type="text" value="Сергеевич">
+                <input class="main__input personal-info" id="person-patronymic" type="text" name="userpatronymic" value="Сергеевич">
+                <label class="main__label" for="person-surname">Фамилия</label>
+                <input class="main__input personal-info" id="person-surname" type="text" name="usersurname" value="Кузнецов">
               </div>
               <div class="main__input-group">
                 <h3 class="main__group-title">Контакты</h3>
                 <label class="main__label" for="person-phone">Телефон</label>
-                <input class="main__input personal-info" id="person-phone" type="text" value="+79876543210">
+                <input class="main__input personal-info" id="person-phone" type="tel" name="userphone" value="+79876543210">
                 <label class="main__label" for="person-email">Электронная почта</label>
-                <input class="main__input personal-info" id="person-email" type="text" value="electron_mail@email.com">
-                <span class="main__btn-discription">Добавьте дополнительную эл. почту</span>
-                <button class="main__mail-add">+ Добавить</button>
+                <input class="main__input personal-info" id="person-email" type="email" name="useremail" value="electron_mail@email.com">
+                <div class="main__add-email-wrap">
+                  <span class="main__btn-discription">Добавьте дополнительную эл. почту</span>
+                  <button class="main__delete-email"><img src="assets/img/icons/delete.svg" alt="Удалить" class="main__delete-btn"></button>
+                  <button class="main__mail-add">+ Добавить</button>
+                </div>
               </div>
             </div>
             <div class="main__adress-group">

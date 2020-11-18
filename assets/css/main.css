@@ -219,7 +219,7 @@ body {
   margin-bottom: 30px;
 }
 
-.main__input-group {
+.main__input-group, .main__add-email-wrap {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -234,7 +234,7 @@ body {
   margin-right: 100px;
 }
 
-.main__input-group:last-child {
+.main__input-group:last-child, .main__add-email-wrap:last-child {
   margin-right: 0;
 }
 
@@ -274,6 +274,33 @@ body {
   outline: none;
   border: 2px solid #0EB1E8;
   color: #000000;
+}
+
+.main__add-email-wrap {
+  width: 100%;
+  position: relative;
+}
+
+.main__delete-email {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  display: none;
+}
+
+.main__delete-email:active, .main__delete-email:focus {
+  outline: none;
+}
+
+.main__delete-email:hover {
+  cursor: pointer;
+}
+
+.main__delete-btn {
+  height: 15px;
+  width: 15px;
 }
 
 .main__mail-add {
