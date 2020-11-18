@@ -84,3 +84,35 @@ function checkInput(inputValue, inputType) {
   };
 };
 
+/***************************
+ *  Форма входа
+***************************/
+
+//Получение данных для входа
+function getUserDate() {
+  const signInForm = document.querySelectorAll('.sign-in-form__input');
+  let userData = {};
+  signInForm.forEach( function(item, i, arr) {
+    userData[ item.name ] = item.value; 
+  });
+  return userData;
+};
+
+//Отправка данных на сервер
+$('.sign-in-form__submit').click( function(evnt) {
+  evnt.preventDefault();
+    $.ajax({
+      method: "POST",
+      url: "signin.php", 
+      data: getUserDate,
+      success: function ( msg ) { 
+        console.log('success');
+      },
+      statusCode: {
+        200: function () { 
+          console.log( "Ok" );
+        }
+      },
+    });
+});
+
